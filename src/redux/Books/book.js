@@ -1,7 +1,18 @@
 const ADD_BOOK = 'BOOK-STORE/books/ADD_BOOK';
 const DELETE_BOOK = 'BOOK-STORE/books/DELETE_BOOK';
 
-const InitialState = [];
+const InitialState = [
+  {
+    id: '1',
+    title: 'Book 1',
+    author: 'Author',
+  },
+  {
+    id: '2',
+    title: 'Book 2',
+    author: 'Author 2',
+  },
+];
 
 // add handleBook reducers
 const handleBookReducer = (state = InitialState, action) => {
@@ -17,7 +28,7 @@ const handleBookReducer = (state = InitialState, action) => {
 };
 
 // Add book
-const AddBook = (book) => ({
+const addBook = (book) => ({
   type: ADD_BOOK,
   book,
 });
@@ -28,4 +39,4 @@ const DeleteBook = (bookId) => ({
   bookId,
 });
 
-export { handleBookReducer, DeleteBook, AddBook };
+export { handleBookReducer, DeleteBook, addBook };
