@@ -4,7 +4,7 @@ import checkStatus from "../redux/Categories/categories";
 
 const Categories = () => {
   const bookStatus = useSelector((state) => state.status);
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   const displayStatus = () => {
     dispatch(checkStatus());
   }
