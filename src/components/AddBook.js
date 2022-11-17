@@ -11,9 +11,11 @@ const AddBook = () => {
     const {bookName, author} = event.target.elements
     console.log(bookName.value, author.value);
     if (author.value !== '' && bookName.value !== ''){
-      dispatch(addBook({id:uuidv4(), title:bookName.value, author:author.value}))
+      dispatch(addBook(uuidv4(),bookName.value, author.value))
     }
-    console.log('Book submitted ✅');
+    bookName.value= '';
+    author.value='';
+    console.log('Book; submitted ✅');
   };
   return (
     <>
