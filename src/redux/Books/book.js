@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const appId = 'yiRWzrbAlFiUPKdrS7aS';
 const apiUrl = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books`
@@ -11,6 +12,23 @@ const InitialState = [];
 
 
 // Add book
+const getBooks = createAsyncThunk(
+  `${apiUrl}/add`,
+  async (payload, { getState }) => {
+    const { data } = await axios.get(apiUrl, {
+      item_id: id,
+      title: bookName,
+      author: bookAuthor,
+      category: 'Sports',
+    }
+    );
+    return data;
+    // return data;
+  }
+
+
+)
+
 const addBook = (id, bookName, bookAuthor) => (dispatch) => {
   axios.post(apiUrl, {
       item_id: id,
