@@ -18,9 +18,12 @@ const AddBook = () => {
     console.log('Book; submitted ✅');
   };
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div className='container mt-5 pb-5'>
+      <div class="Line"></div>
+    <h5 className='text-muted fw-bold'>Add New Book</h5>
+      <form onSubmit={handleSubmit} className="d-flex justify-content-between ">
         <input
+        className='w-50 p-2 text-muted'
           id="bookName"
           type="text"
           name="title"
@@ -28,15 +31,16 @@ const AddBook = () => {
           placeholder="Book Name"
         />
         <input
+        className='w-25 p-2 text-muted'
           id="author"
           type="text"
           name="author"
           required
           placeholder="Author"
         />
-        <button type="submit" >Add Book</button>
+        <button type="submit" className='btn btn-sm btn-primary ps-5 pe-5' >Add Book</button>
       </form>
-    </>
+    </div>
   );
 }
 export default AddBook;
