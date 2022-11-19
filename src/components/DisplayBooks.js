@@ -14,8 +14,9 @@ const DisplayBooks = () => {
   return (
     <div className="book-container">
       {bookItem.map((item) => (
-        <Book key={item.id} id={item.id} title={item.title} author={item.author} />
+        <Book key={item.id} id={item.id} title={item.title} author={item.author}  category={item.category}/>
       ))}
+      
       <AddBook />
     </div>
   );
