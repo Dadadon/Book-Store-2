@@ -25,14 +25,14 @@ const Book = (item) => {
       <div className="d-grid w-50 ps-5">
         {" "}
         <p className="text-muted fw-bold">{category}</p>
-        <h2 className="mb-0">{title}</h2>
-        <p className="text-primary">{author}</p>
-        <div className="d-flex gap-3">
-          <a href="##" className="text-primary nav-link">Comments</a>
-          <p className="text-muted">|</p>
-          <a href="##" className="text-primary nav-link" onClick={deleteBook}>Remove</a>
-          <p className="text-muted">|</p>
-          <a href="##" className="text-primary nav-link">Edit</a>
+        <h2 className="mb-0 Title">{title}</h2>
+        <p className="l-text">{author}</p>
+        <div className="d-flex gap-3 justify-content-start">
+          <a href="##" className="l-text2 nav-link">Comments</a>
+          <p className="text-muted l-text2">|</p>
+          <a href="##" className="l-text2 nav-link" onClick={deleteBook}>Remove</a>
+          <p className="text-muted l-text2">|</p>
+          <a href="##" className="l-text2 nav-link">Edit</a>
         </div>
       </div>
       <div className="w-25 d-flex mt-4">

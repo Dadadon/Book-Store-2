@@ -38,7 +38,7 @@ const AddBook = () => {
           required
           placeholder="Author"
         />
-        <button type="submit" className='btn btn-sm btn-primary' >Add Book</button>
+        <button type="submit" className='btn btn-sm btn-primary ps-5 pe-5' >Add Book</button>
       </form>
     </div>
   );
